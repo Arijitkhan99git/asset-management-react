@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import {NavLink, useNavigate} from 'react-router-dom'
-import Profile from '../Components/Profile/Profile'
+import Profile from './Components/Profile/Profile'
+
 
 
 
@@ -37,7 +38,7 @@ function EmployeeLayout() {
                 </div>
             </nav>
             </div>
-            <Profile></Profile>
+           <Profile></Profile>
     </>
   )
 }

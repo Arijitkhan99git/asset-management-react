@@ -14,7 +14,7 @@ import NewUser from './Components/Users/NewUser.jsx'
 import UpdateUser from './Components/Users/UpdateUser.jsx'
 import Profile from './Components/Profile/Profile.jsx'
 import AddNewAssignment from './Components/Assignment/AddNewAssignment.jsx'
-import EmployeeLayout from './context/EmployeeLayout.jsx'
+import EmployeeLayout from './EmployeeLayout.jsx'
 
 function App() {
  
