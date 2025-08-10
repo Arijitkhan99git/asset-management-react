@@ -7,9 +7,10 @@ function PasswordChange() {
     
     const [errorMessage, setErrorMessage] = useState('')
 
+    const passSection = useRef(null)
     const errorRef = useRef(null)
     const successRef = useRef(null)
-    const passBtnRef = useRef(null)
+    
     const formRef = useRef(null)
 
     let authToken =localStorage.getItem("token")
@@ -59,7 +60,7 @@ async function changePasswordAPI()
            
 
             if (successRef.current) {
-                 errorRef.current.classList.add('hidden');
+                errorRef.current.classList.add('hidden');
                 successRef.current.classList.remove('hidden');
             }    
 
@@ -75,6 +76,7 @@ async function changePasswordAPI()
     catch (error) {
         if (errorRef.current) {
             setErrorMessage('Enter the correct password')
+
             successRef.current.classList.add('hidden');
             errorRef.current.classList.remove('hidden');
         } 
@@ -85,7 +87,12 @@ async function changePasswordAPI()
  }
 
             
-        
+const toggleSection = ()=>{
+    if(passSection.current){
+        passSection.current.classList.toggle('hidden')
+    }
+    
+}        
 
 
   return (
@@ -95,18 +102,20 @@ async function changePasswordAPI()
             <button id="password-section-toggle" className="w-full flex items-center justify-between text-left focus:outline-none">
                 <h2 className="text-lg font-medium text-gray-900">Change Password</h2>
                 <svg
+                    onClick={toggleSection}
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    strokeWidth="2"
                 >
                     <polyline points="6 9 12 15 18 9" />
                 </svg>
             </button>
         </div>
 
-        <div id="password-section-content" className="px-6 py-4">
+        <div ref={passSection} id="password-section-content" className="hidden px-6 py-4">
             <form 
                 onSubmit={passwordChnageFun} 
                 ref={formRef}    id="change-password-form" className="space-y-4">

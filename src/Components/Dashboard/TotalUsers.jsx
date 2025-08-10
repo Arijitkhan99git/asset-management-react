@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Users } from 'react-feather'
 
 function TotalUsers() {
     const [userCount, SetuserCount] = useState(null)
@@ -44,7 +45,7 @@ function TotalUsers() {
             <div className="p-5">
                 <div className="flex items-center">
                     <div className="flex-shrink-0">
-                        <i data-feather="users" className="h-6 w-6 text-green-600"></i>
+                        <Users className="h-6 w-6 text-green-600"></Users>
                     </div>
                     <div className="ml-5 w-0 flex-1">
                         <dl>

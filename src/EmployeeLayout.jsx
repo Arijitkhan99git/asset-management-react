@@ -26,7 +26,7 @@ function EmployeeLayout() {
                             <li>     
                                 <NavLink
                                 to='/homepage/profile'
-                                className="text-orange-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-blue-700"  
+                                className="text-orange-700 border-b py-2 px-3 mx-3 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-blue-700"  
                                 >Profile
                                 </NavLink>
                             </li>

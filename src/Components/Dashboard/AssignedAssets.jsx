@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {UserCheck} from 'react-feather'
 
 function AssignedAssets() {
   const [assetCount, setAssetCount] = useState(null)
@@ -45,10 +46,7 @@ function AssignedAssets() {
         <div className="p-5">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <i
-                data-feather="user-check"
-                className="h-6 w-6 text-yellow-600"
-              ></i>
+             <UserCheck className="h-6 w-6 text-yellow-600"></UserCheck>
             </div>
             <div className="ml-5 w-0 flex-1">
               <dl>

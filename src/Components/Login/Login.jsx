@@ -8,11 +8,13 @@ function Login() {
 
     const state = useContext(AppContext)
 
-    const messageRef = useRef(null)
+    const errorMessageRef = useRef(null)
+    const successMessageRef= useRef(null)
 
     const [email, setEmail] = useState('')
     const [password, setPassword]= useState('')
-    
+    const [loginMessage, setLoginMessage] = useState('')
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Email is:", email);
@@ -52,9 +54,15 @@ function Login() {
 
                     if(value.success)
                         {
-                                             
-                        localStorage.setItem("token",authToken)
+                            if (successMessageRef.current) {
+                                if(errorMessageRef.current) errorMessageRef.current.classList.add('hidden');
+                                
+                                successMessageRef.current.classList.remove('hidden')
+                                setLoginMessage('Fetching your data, Please wait!')
 
+                            }
+                        localStorage.setItem("token",authToken)
+                        
                         checkUserRole() //This will check the user's role and redirect to the desired page    
                             
                     }   
@@ -63,7 +71,11 @@ function Login() {
                 }                   
             } 
             catch (error) {
-                messageRef.current.classList.remove('hidden')
+               if (errorMessageRef.current) {
+                    errorMessageRef.current.classList.remove('hidden')
+                    setLoginMessage('Incorrect email or password. Please try again.')
+
+                }
                 console.log(error);
                     
             }
@@ -124,8 +136,6 @@ function Login() {
        
     
 
-
-
   return (
     <>
         <div id="loginpage"  className="flex justify-center items-center h-screen">
@@ -157,8 +167,12 @@ function Login() {
                         </button>
                     </div>   
             </form> 
-                <p ref={messageRef}
-                    className='hidden text-center text-xl font-bold text-red-700 p-4'>Wrong Credentials</p>
+                <p ref={successMessageRef}
+                    className='hidden text-center text-base font-semibold p-4 text-blue-700'>{loginMessage}
+                </p>
+                <p ref={errorMessageRef}
+                    className='hidden text-center text-base font-semibold p-4 text-red-500'>{loginMessage}
+                </p>
             </div>
         </div>
     </>

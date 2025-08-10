@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { Package } from 'react-feather';
 
 function TotalAsset() {
      const [count, setCount] = useState(null)
@@ -45,7 +45,7 @@ function TotalAsset() {
         <div className="p-5">
             <div className="flex items-center">
                 <div className="flex-shrink-0">
-                    <i data-feather="package" className="h-6 w-6 text-blue-600"></i>
+                     <Package className="h-6 w-6 text-blue-600" />
                 </div>
                 <div className="ml-5 w-0 flex-1">
                     <dl>
