@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import './App.css'
 import { Route, Routes , BrowserRouter} from 'react-router-dom'
-import Login from './components/Login/Login.jsx'
+import Login from './Components/Login/Login.jsx'
 import Layout from './Layout.jsx'
 import Dashboard from './Components/Dashboard/Dashboard.jsx'
 import Users from './Components/Users/Users.jsx'
