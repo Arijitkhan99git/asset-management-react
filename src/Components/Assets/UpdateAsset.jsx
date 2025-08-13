@@ -110,8 +110,8 @@ function UpdateAsset() {
                                     
 
                                     <div className="flex justify-end mt-7 mb-4">
-                                        <button type="button" onClick={assetBackFun} className="text-gray-700  text-md bg-gray-200 rounded-md p-2 mr-4">Cancel</button>
-                                        <input  className="text-white text-md bg-blue-500 rounded-md p-2" 
+                                        <button type="button" onClick={assetBackFun} className="text-gray-700  text-md bg-gray-200 shadow-sm rounded-md p-2 mr-4">Cancel</button>
+                                        <input  className="text-white text-md bg-blue-500 rounded-md shadow-sm p-2" 
                                           disabled={isDisabled} type="submit" value="Submit"/>           
                                     </div>
                                 </form>

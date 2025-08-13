@@ -149,8 +149,8 @@ function NewUser() {
 
                 <div className="flex place-content-between my-6">       
                     <div className="flex ">
-                        <button disabled={isDisabled} type="button" onClick={addUerBackFun} className="text-gray-700 text-md bg-gray-200 rounded-md p-2 mr-4">Cancel</button>
-                        <button disabled={isDisabled} type="submit" className="text-white text-md bg-blue-500 rounded-md p-2">Submit</button>           
+                        <button disabled={isDisabled} type="button" onClick={addUerBackFun} className="text-gray-700 text-md bg-gray-200 rounded-md p-2 mr-4 shadow-sm">Cancel</button>
+                        <button disabled={isDisabled} type="submit" className="text-white text-md bg-blue-500 rounded-md shadow-sm p-2">Submit</button>           
                     </div>
 
                       <div ref={messageRef} className="hidden items-center text-sky-500">

@@ -75,7 +75,7 @@ function Assignment() {
               <td  className=" text-center text-gray-800">{data?.status}</td>
               <td  className=" text-center text-gray-800">
                   <div className="flex justify-center content-center">
-                      <button onClick={()=> unassignAssignment(data?.assetId._id)}  className="bg-orange-400 text-white  rounded-md p-1 m-3">Unassign</button>
+                      <button onClick={()=> unassignAssignment(data?.assetId._id)}  className="bg-orange-400 text-white shadow-sm rounded-md p-1 m-3">Unassign</button>
                   </div>                                            
               </td>
           </tr>)
@@ -177,7 +177,7 @@ async function unassignAssignment(assetID) {
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold text-gray-900 md:hidden">Assignments</h2>
                 <button 
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 shadow-sm rounded-md font-medium transition-colors duration-200"
                     onClick={addNewAssignment}
                 >
                     <span className="hidden sm:inline">New Assignment</span>

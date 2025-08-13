@@ -117,12 +117,12 @@ const UserDetails = () => {
                         <div className="flex justify-center gap-2">
                             <button 
                                 onClick={() => editUserData(user)}
-                                className="bg-blue-500 hover:bg-blue-600 text-white rounded-md px-3 py-1 text-sm transition-colors duration-200">
+                                className="bg-blue-500 hover:bg-blue-600 shadow-sm text-white rounded-md px-3 py-1 text-sm transition-colors duration-200">
                                 Edit
                             </button>
                             <button 
                                 onClick={() => removeUserData(user.id)}
-                                className="bg-gray-500 hover:bg-gray-600 text-white rounded-md px-3 py-1 text-sm transition-colors duration-200">
+                                className="bg-gray-500 hover:bg-gray-600 shadow-sm text-white rounded-md px-3 py-1 text-sm transition-colors duration-200">
                                 Remove
                             </button>
                         </div>
@@ -155,12 +155,12 @@ const MobileView =()=>{
                     <div className="flex gap-2 pt-2">
                         <button 
                             onClick={() => editUserData(user)}
-                            className="flex-1 bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 shadow-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Edit
                         </button>
                         <button 
                             onClick={() => removeUserData(user.id)}
-                            className="flex-1 bg-gray-500 hover:bg-gray-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 shadow-sm bg-gray-500 hover:bg-gray-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Remove
                         </button>
                     </div>
@@ -181,7 +181,7 @@ const MobileView =()=>{
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-xl font-semibold text-gray-900 md:hidden">Users</h2>
                         <button 
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
+                            className="bg-blue-500 shadow-sm hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
                             onClick={addUserFun}
                         >
                             <span className="hidden sm:inline">Add User</span>

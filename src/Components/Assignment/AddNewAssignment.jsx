@@ -202,8 +202,8 @@ const addAssignmentSubmit = (event)=>{
                 
 
                 <div className="flex justify-end mt-7 mb-4">
-                    <button type="button" onClick={assignmentBackFun} className="text-gray-700  text-md bg-gray-200 rounded-md p-2 mr-4" value="Reset">Cancel</button>
-                    <input className=" text-white text-md bg-blue-500 rounded-md p-2 "
+                    <button type="button" onClick={assignmentBackFun} className="text-gray-700 shadow-sm text-md bg-gray-200 rounded-md p-2 mr-4" value="Reset">Cancel</button>
+                    <input className=" text-white text-md bg-blue-500 rounded-md p-2 shadow-sm"
                     type="submit" disabled={isDisabled} value="Submit"/>           
                 </div>
             </form>

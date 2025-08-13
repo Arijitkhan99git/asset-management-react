@@ -113,14 +113,14 @@ function Assets() {
                       <td className="text-center text-gray-800">{assetDate}</td>
                       <td className="text-center text-gray-800 px-4 py-2">
                         <button
-                          className="bg-blue-400 text-white  rounded-md p-1 m-2"
+                          className="bg-blue-400 text-white shadow-sm rounded-md p-1 m-2"
                           onClick={() => updateAsset(asset)}
                         >
                           Update
                         </button>
 
                         <button
-                          className="bg-gray-400 text-white rounded-md p-1 m-2"
+                          className="bg-gray-400 text-white shadow-sm rounded-md p-1 m-2"
                           onClick={() => removeAsset(asset.id)}
                         >
                           Remove
@@ -162,12 +162,12 @@ function Assets() {
                     <div className="flex gap-2 pt-2">
                         <button 
                             onClick={() => updateAsset(asset)}
-                            className="flex-1 bg-sky-500 hover:bg-blue-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 bg-sky-500 hover:bg-blue-600 text-white shadow-sm rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Update
                         </button>
                         <button 
                             onClick={() => removeAsset(asset.id)}
-                            className="flex-1 bg-gray-500 hover:bg-gray-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 bg-gray-500 hover:bg-gray-600 text-white shadow-sm rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Remove
                         </button>
                     </div>
@@ -188,7 +188,7 @@ function Assets() {
                <div className="flex justify-between items-center mb-4">
                         <h2 className="text-xl font-semibold text-gray-900 md:hidden">Assets</h2>
                         <button 
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 shadow-sm rounded-md font-medium transition-colors duration-200"
                             onClick={addNewAsset}
                         >
                             <span className="hidden sm:inline">Add Asset</span>
