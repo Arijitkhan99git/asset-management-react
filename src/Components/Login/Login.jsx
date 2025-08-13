@@ -138,7 +138,7 @@ function Login() {
 
   return (
     <>
-        <div id="loginpage"  className="flex justify-center items-center h-screen">
+        <div id="loginpage"  className="flex justify-center items-center min-h-screen max-h-screen overflow-hidden ">
             <div className="flex flex-col justify-center bg-white rounded-lg p-10 w-md shadow-sm">
                 <div className="mb-7">
                     <h1 className="text-center text-2xl font-bold text-black">Asset Management</h1>

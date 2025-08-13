@@ -42,7 +42,7 @@ function Header() {
         
   return (
     <nav className='shadow-md'>
-        <div className='flex justify-between py-4 px-4 md:px-6 lg:px-10'>
+        <div className='flex justify-between py-2 px-4 md:px-6 lg:px-10'>
 
        
             <div className=' mx-2 sm:mx-4'>
