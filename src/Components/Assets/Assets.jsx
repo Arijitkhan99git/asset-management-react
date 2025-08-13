@@ -113,14 +113,14 @@ function Assets() {
                       <td className="text-center text-gray-800">{assetDate}</td>
                       <td className="text-center text-gray-800 px-4 py-2">
                         <button
-                          className="bg-blue-400 text-white shadow-sm rounded-md p-1 m-2"
+                          className="bg-blue-400 text-white border border-gray-200 shadow-sm rounded-md p-1 m-2"
                           onClick={() => updateAsset(asset)}
                         >
                           Update
                         </button>
 
                         <button
-                          className="bg-gray-400 text-white shadow-sm rounded-md p-1 m-2"
+                          className="bg-gray-400 text-white border border-gray-200 shadow-sm rounded-md p-1 m-2"
                           onClick={() => removeAsset(asset.id)}
                         >
                           Remove
@@ -188,7 +188,7 @@ function Assets() {
                <div className="flex justify-between items-center mb-4">
                         <h2 className="text-xl font-semibold text-gray-900 md:hidden">Assets</h2>
                         <button 
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 shadow-sm rounded-md font-medium transition-colors duration-200"
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 d rounded-md font-medium transition-colors duration-200"
                             onClick={addNewAsset}
                         >
                             <span className="hidden sm:inline">Add Asset</span>

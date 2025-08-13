@@ -155,12 +155,12 @@ const MobileView =()=>{
                     <div className="flex gap-2 pt-2">
                         <button 
                             onClick={() => editUserData(user)}
-                            className="flex-1 shadow-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 shadow-sm border border-gray-200 bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Edit
                         </button>
                         <button 
                             onClick={() => removeUserData(user.id)}
-                            className="flex-1 shadow-sm bg-gray-500 hover:bg-gray-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                            className="flex-1 shadow-sm border border-gray-200 bg-gray-500 hover:bg-gray-600 text-white rounded-md py-2 text-sm font-medium transition-colors duration-200">
                             Remove
                         </button>
                     </div>

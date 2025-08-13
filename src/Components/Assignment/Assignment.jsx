@@ -119,7 +119,7 @@ const MobileView = ()=>{
                         <div className="flex gap-2 pt-2">
                             <button 
                                 onClick={()=> unassignAssignment(data?.assetId._id)}
-                                className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-900 shadow-sm rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                                className="flex-1 bg-gray-300 border border-gray-200 hover:bg-gray-400 text-gray-900 shadow-sm rounded-md py-2 text-sm font-medium transition-colors duration-200">
                                 Unassign
                             </button>
                             

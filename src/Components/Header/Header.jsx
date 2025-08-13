@@ -115,9 +115,9 @@ function Header() {
                             <Menu className="h-6 w-6 text-gray-800 cursor-pointer"></Menu>
                     </button>  
 
-                    <button onClick={handelProfile} className='w-10 h-10 rounded-full border-2 border-gray-400 
+                    <button onClick={handelProfile} className='w-7 h-7 lg:h-8 lg:w-8 rounded-full border-2 border-gray-400 
                                     flex justify-center items-center hover:bg-blue-200'>
-                                    <User className="h-6 w-6 text-gray-600"></User>
+                                    <User className="h-5 w-5 lg:h-6 lg:w-6 text-gray-600"></User>
                     </button>      
                         
                 </div>
