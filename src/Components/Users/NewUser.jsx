@@ -72,7 +72,7 @@ function NewUser() {
 
   return (
     <>
-      <div className='flex w-full justify-center items-center'>
+      <div className='flex w-full justify-center items-center my-5'>
           <div id="addUser" className="w-lg flex flex-col justify-center items-center bg-white rounded-lg shadow-sm">
             <div className="flex justify-start w-full pl-4 pt-4">
                 <button id="assetBackBtn" onClick={addUerBackFun} 

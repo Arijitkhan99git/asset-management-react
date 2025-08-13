@@ -130,16 +130,16 @@ async function unassignAssignment(assetID) {
                 <button className="bg-blue-500 text-white rounded-md mb-4 p-2" onClick={addNewAssignment}
                 >New Assignment</button>
             </div>
-            <div className="overflow-x-auto p-2">
+            <div className="overflow-x-auto max-h-screen overflow-y-auto">
                 <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-gray-50 sticky top-0 z-20">
                         <tr>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Name</th>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Serial No</th>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned To</th>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned Date</th>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
-                            <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Action</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Name</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Serial No</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned To</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned Date</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
+                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Action</th>
                         </tr>
                     </thead>
                     <tbody id="Assignment-table-body" className="bg-white divide-gray-200 ">

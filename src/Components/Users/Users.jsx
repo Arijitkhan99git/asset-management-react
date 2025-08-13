@@ -134,7 +134,7 @@ function Users()
 
   return (
     <>
-     <div className="shadow overflow-hidden sm:rounded-md w-full p-4">         
+     <div className="shadow overflow-hidden sm:rounded-md w-full p-0 md:p-2 lg:p-4">         
                     <div className="px-4 py-5 ">
                         <div className="flex justify-end ">
                             <button className="bg-blue-500 text-white p-1 rounded-md mb-4 "

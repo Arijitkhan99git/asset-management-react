@@ -106,7 +106,7 @@ function Assets() {
               const isoDate = new Date(asset.createdAt); 
 							const assetDate = isoDate.toLocaleDateString() 
               return(    
-                <tr key={asset.id} className="my-2 border border-gray-100">
+                <tr key={asset.id} className="my-1 border border-gray-100">
                       <td className="text-center text-gray-800">{asset.name}</td>
                       <td className="text-center text-gray-800">{asset.serialNumber}</td>
                       <td className="text-center text-gray-800">{asset.status}</td>
@@ -136,22 +136,22 @@ function Assets() {
 
   return (
     <>
-       <div className="shadow overflow-hidden sm:rounded-md p-4 w-full">         
+       <div className="shadow overflow-hidden sm:rounded-md p-0 sm:p-4 w-full">         
                     <div className="px-4 py-5 sm:p-6">
                         <div className="flex justify-end ">
                             <button className="bg-blue-500 text-white p-1 rounded-md mb-4 " onClick={addNewAsset}
                             >Add Asset</button>
                         </div>
 
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full divide-y divide-gray-200">
-                                <thead className="bg-gray-50">
-                                    <tr>
-                                        <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Name</th>                         
-                                        <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Serial Number</th>
-                                        <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
-                                        <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">created At</th>            
-                                        <th className="pb-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Actions</th>
+                        <div className="overflow-x-auto max-h-screen overflow-y-auto">
+                            <table className="min-w-full w-full divide-y divide-gray-200">                             
+                                <thead className="bg-gray-50 sticky top-0 z-20 ">
+                                    <tr >
+                                        <th className="py-4 text-center align-middle justify-center text-base font-medium text-gray-900 uppercase tracking-wider">Name</th>                         
+                                        <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Serial Number</th>
+                                        <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
+                                        <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">created At</th>            
+                                        <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-gray-200 ">

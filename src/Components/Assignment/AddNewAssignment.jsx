@@ -166,8 +166,8 @@ const addAssignmentSubmit = (event)=>{
 
   return (
     <>
-       <div id="addAssignment" className=" bg-white flex justify-center items-center mt-2 rounded-lg shadow-sm ">
-        <div className="p-2 w-xl flex flex-col  rounded-lg shadow-sm">           
+       <div id="addAssignment" className=" bg-white flex justify-center items-center my-10  ">
+        <div className="p-5 w-xl flex flex-col  rounded-lg shadow-sm">           
         
             <div className="flex justify-start w-full">
                 <button onClick={assignmentBackFun} className="text-gray-700 hover:text-orange-500">&larr; Back</button>

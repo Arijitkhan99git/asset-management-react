@@ -76,7 +76,7 @@ const addAssetAPIFun =()=>{
 
   return (
     <>
-        <div className='flex w-full justify-center items-center'>
+        <div className='flex w-full justify-center items-center my-5'>
          <div className="w-xl flex flex-col justify-center items-center bg-white p-4 rounded-lg shadow-sm">
                     <div className="flex justify-start w-full">
                          <button onClick={assetBackFun} className="text-gray-700 hover:text-orange-500">&larr; Back</button>

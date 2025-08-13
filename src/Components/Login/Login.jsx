@@ -151,19 +151,19 @@ function Login() {
                         <input 
                             value={email}
                             onChange={(e)=>setEmail(e.target.value)}
-                            className="border-1 border-gray-400 border-solid rounded-md p-1" type="email" required placeholder="Enter your email" name="email"/>
+                            className="border border-gray-400 border-solid rounded-md p-1" type="email" required placeholder="Enter your email" name="email"/>
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="passwordInput" className="text-stone-600 font-medium">Password</label>
                         <input
                             value={password}
                             onChange={(e)=>setPassword(e.target.value)}
-                            className="border-1 border-gray-400 border-solid rounded-md p-1" 
+                            className="border border-gray-400 border-solid rounded-md p-1" 
                             type="password" required placeholder="Enter your password" 
                             name="password"/>
                     </div>
                     <div >
-                        <button type="submit" className="text-white bg-blue-600 w-full p-1 mt-2 rounded-md"> Sign In
+                        <button type="submit" className="text-white bg-blue-600 w-full p-1 mt-2 rounded-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out "> Sign In
                         </button>
                     </div>   
             </form> 
