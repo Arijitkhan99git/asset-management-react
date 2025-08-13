@@ -85,6 +85,53 @@ function Assignment() {
     )
   }
 
+const MobileView = ()=>{
+    return(
+        <>{
+            assignmentdata.map((data)=>{
+                let name = data?.assignedTo?.firstName + " " + data?.assignedTo?.lastName
+                const isoDate = new Date(data.assignedAt); 
+                const assignDate = isoDate.toLocaleDateString() 
+
+                return(
+                <div key={data?.assetId._id} className="bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm">
+                    <div className="space-y-2">
+                        <div className="flex justify-between items-start">
+                            <div >
+                                <h3 className="font-semibold text-gray-900 text-lg pb-1">
+                                {data?.assetId?.name}
+                                </h3>
+                                <p className="text-gray-600 text-sm pb-1">Serial No: {data?.assetId?.serialNumber}</p>
+                                <h4 className=" text-gray-800 text-base">Owner name: {name}</h4>
+                                
+                            </div>
+                    
+
+                            <div >
+                                <span className="bg-teal-400 text-white text-xs font-medium px-2.5 py-0.5 mb-2 inline-block rounded">
+                                {data?.status}
+                                </span>
+                                <p className="text-gray-600 text-sm ">{assignDate}</p>
+                            </div>
+                        
+                        </div>
+                        
+                        <div className="flex gap-2 pt-2">
+                            <button 
+                                onClick={()=> unassignAssignment(data?.assetId._id)}
+                                className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-900 shadow-sm rounded-md py-2 text-sm font-medium transition-colors duration-200">
+                                Unassign
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+               )
+            })
+        }
+        </>
+    )
+}
 //Unassign
 async function unassignAssignment(assetID) {
     //console.log(`Unassign Asset will be ${assetID}`);
@@ -124,28 +171,42 @@ async function unassignAssignment(assetID) {
 
   return (
     <>
-       <div className="shadow overflow-hidden sm:rounded-md w-full">         
-        <div className="px-4 py-5 sm:p-6">
-            <div className="flex justify-end p-2">
-                <button className="bg-blue-500 text-white rounded-md mb-4 p-2" onClick={addNewAssignment}
-                >New Assignment</button>
+       <div className="shadow overflow-hidden sm:rounded-md w-full p-2 md:p-4">         
+        <div className="px-2 py-4 md:px-4 md:py-5">
+      
+            <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-gray-900 md:hidden">Assignments</h2>
+                <button 
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
+                    onClick={addNewAssignment}
+                >
+                    <span className="hidden sm:inline">New Assignment</span>
+                    <span className="sm:hidden">Add</span>
+                </button>
             </div>
-            <div className="overflow-x-auto max-h-screen overflow-y-auto">
+            
+            {/* Desktop Table View */}
+            <div className="hidden md:block overflow-x-auto max-h-[70vh] overflow-y-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50 sticky top-0 z-20">
                         <tr>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Name</th>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Serial No</th>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned To</th>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned Date</th>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
-                            <th className="py-4 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Action</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Name</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Asset Serial No</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned To</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Assigned Date</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Status</th>
+                            <th className="py-2 text-center text-base font-medium text-gray-900 uppercase tracking-wider">Action</th>
                         </tr>
                     </thead>
                     <tbody id="Assignment-table-body" className="bg-white divide-gray-200 ">
                         <AssignmentDetails></AssignmentDetails>
                     </tbody>
                 </table>
+            </div>
+
+              {/* Mobile Card View */}
+            <div className="md:hidden max-h-[70vh] overflow-y-auto">
+                <MobileView></MobileView>
             </div>
 
             <div ref={messageRef} className="w-full bg-slate-200 p-3 rounded-md shadow-sm">

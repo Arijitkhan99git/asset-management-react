@@ -42,7 +42,7 @@ function Header() {
         
   return (
     <nav className='shadow-md'>
-        <div className='flex justify-between py-2 px-4 md:px-6 lg:px-10'>
+        <div className='flex justify-between p-1 lg:py-2 px-4 md:px-6 lg:px-10'>
 
        
             <div className=' mx-2 sm:mx-4'>
@@ -109,7 +109,7 @@ function Header() {
                 </div>
             
                 {/* Profile and user Menu */}
-                <div className='flex items-center gap-10 mx-6 '>                                 
+                <div className='flex items-center gap-6 mx-6 '>                                 
 
                     <button onClick={handelMenu} className='md:hidden '>
                             <Menu className="h-6 w-6 text-gray-800 cursor-pointer"></Menu>
